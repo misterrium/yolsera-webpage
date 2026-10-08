@@ -1,5 +1,6 @@
 const translations = {
   en: {
+    navProduct: "Product",
     navFeatures: "Features",
     navSupport: "Support",
     navPrivacy: "Privacy",
@@ -8,7 +9,7 @@ const translations = {
     heroEyebrow: "COMING SOON TO iPHONE",
 
     heroTitle:
-      "Your whole trip,<br>in one place.",
+      "Your Whole Trip,<br>in One Place.",
 
     heroDescription:
       "Plan your journey, stay organized while you travel, and keep the memories afterwards.",
@@ -17,13 +18,13 @@ const translations = {
       "Download on the",
 
     comingSoon:
-      "Coming soon",
+      "Coming Soon",
 
     journeyEyebrow:
       "THE WHOLE JOURNEY",
 
     journeyTitle:
-      "Built for more than the itinerary.",
+      "Built for More Than the Itinerary.",
 
     planTitle:
       "Plan",
@@ -44,22 +45,22 @@ const translations = {
       "Keep the places and moments that made the journey yours.",
 
     everythingTitle:
-      "Everything that matters,<br>when you need it.",
+      "Everything That Matters,<br>When You Need It.",
 
     featurePlanning:
-      "Day-by-day planning",
+      "Day-by-Day Planning",
 
     featureReadiness:
-      "Travel readiness",
+      "Travel Readiness",
 
     featureDocuments:
-      "Tasks & documents",
+      "Tasks and Documents",
 
     featureBudget:
-      "Budget & expenses",
+      "Budget and Expenses",
 
     featureShared:
-      "Shared trips",
+      "Shared Trips",
 
     featureMemories:
       "Memories",
@@ -68,22 +69,25 @@ const translations = {
       "DESIGNED WITH CARE",
 
     privacyTitle:
-      "Your trip. Your data.",
+      "Your Trip. Your Data.",
 
     privacyDescription:
       "Yolsera is designed with a local-first approach, keeping your travel information accessible and under your control.",
 
     learnPrivacy:
-      "Learn about privacy →",
+      "Learn About Privacy →",
 
     ctaTitle:
-      "Ready for wherever<br>you go next.",
+      "Ready for Wherever<br>You Go Next.",
 
     ctaDescription:
-      "Coming soon to iPhone.",
+      "Coming Soon to iPhone.",
 
     footerTagline:
-      "Travel, from planning to memories.",
+      "Your Travel Companion.",
+
+    footerProduct:
+      "Product",
 
     footerHelp:
       "Help",
@@ -95,14 +99,17 @@ const translations = {
       "Contact",
 
     terms:
-      "Terms",
+      "Terms of Use",
 
     rights:
-      "All rights reserved."
+      "All Rights Reserved."
   },
 
 
   tr: {
+    navProduct:
+      "Ürün",
+
     navFeatures:
       "Özellikler",
 
@@ -119,7 +126,7 @@ const translations = {
       "YAKINDA iPHONE'DA",
 
     heroTitle:
-      "Tüm seyahatin,<br>tek bir yerde.",
+      "Tüm Seyahatin,<br>Tek Bir Yerde.",
 
     heroDescription:
       "Yolculuğunu planla, seyahat boyunca düzenli kal ve anılarını yanında tut.",
@@ -134,7 +141,7 @@ const translations = {
       "TÜM YOLCULUK",
 
     journeyTitle:
-      "Sadece bir seyahat planından fazlası.",
+      "Sadece Bir Seyahat Planından Fazlası.",
 
     planTitle:
       "Planla",
@@ -143,7 +150,7 @@ const translations = {
       "Günlerine, önceliklerine ve seyahat tarzına uyum sağlayan bir yolculuk oluştur.",
 
     travelTitle:
-      "Seyahat et",
+      "Seyahat Et",
 
     travelDescription:
       "Planlarını, görevlerini, belgelerini ve harcamalarını ihtiyacın olduğunda yanında tut.",
@@ -155,22 +162,22 @@ const translations = {
       "Yolculuğu sana özel yapan yerleri, anları ve anıları sakla.",
 
     everythingTitle:
-      "Önemli olan her şey,<br>ihtiyacın olduğunda yanında.",
+      "Önemli Olan Her Şey,<br>İhtiyacın Olduğunda Yanında.",
 
     featurePlanning:
-      "Gün gün seyahat planı",
+      "Gün Gün Seyahat Planı",
 
     featureReadiness:
-      "Seyahat hazırlığı",
+      "Seyahat Hazırlığı",
 
     featureDocuments:
-      "Görevler ve belgeler",
+      "Görevler ve Belgeler",
 
     featureBudget:
-      "Bütçe ve harcamalar",
+      "Bütçe ve Harcamalar",
 
     featureShared:
-      "Paylaşılan seyahatler",
+      "Paylaşılan Seyahatler",
 
     featureMemories:
       "Anılar",
@@ -185,16 +192,19 @@ const translations = {
       "Yolsera, seyahat bilgilerinin erişilebilir ve senin kontrolünde kalmasına öncelik veren local-first bir yaklaşımla tasarlanır.",
 
     learnPrivacy:
-      "Gizlilik hakkında bilgi al →",
+      "Gizlilik Hakkında Bilgi Al →",
 
     ctaTitle:
-      "Sıradaki yolculuğuna<br>hazır ol.",
+      "Sıradaki Yolculuğuna<br>Hazır Ol.",
 
     ctaDescription:
       "Yakında iPhone'da.",
 
     footerTagline:
-      "Planlamadan anılara, tüm seyahatin.",
+      "Seyahat Arkadaşınız.",
+
+    footerProduct:
+      "Ürün",
 
     footerHelp:
       "Yardım",
@@ -209,7 +219,7 @@ const translations = {
       "Kullanım Koşulları",
 
     rights:
-      "Tüm hakları saklıdır."
+      "Tüm Hakları Saklıdır."
   }
 };
 
@@ -227,6 +237,11 @@ const translatableElements =
     "[data-i18n]"
   );
 
+const languageContentBlocks =
+  document.querySelectorAll(
+    "[data-lang-content]"
+  );
+
 
 function applyLanguage(language) {
 
@@ -237,6 +252,10 @@ function applyLanguage(language) {
     return;
   }
 
+
+  /*
+    Translate individual UI elements.
+  */
 
   translatableElements.forEach(
     (element) => {
@@ -255,9 +274,35 @@ function applyLanguage(language) {
   );
 
 
+  /*
+    Switch full-page EN / TR content blocks.
+    Used by Privacy, Terms, Support and Contact.
+  */
+
+  languageContentBlocks.forEach(
+    (element) => {
+
+      const shouldShow =
+        element.dataset.langContent === language;
+
+      element.hidden =
+        !shouldShow;
+
+    }
+  );
+
+
+  /*
+    Update the HTML language attribute.
+  */
+
   document.documentElement.lang =
     language;
 
+
+  /*
+    Update language switch appearance.
+  */
 
   languageButtons.forEach(
     (button) => {
@@ -267,9 +312,20 @@ function applyLanguage(language) {
         button.dataset.language === language
       );
 
+      button.setAttribute(
+        "aria-pressed",
+        button.dataset.language === language
+          ? "true"
+          : "false"
+      );
+
     }
   );
 
+
+  /*
+    Remember preference across all Yolsera pages.
+  */
 
   localStorage.setItem(
     "yolsera-language",
@@ -358,6 +414,11 @@ let demoTimer = null;
 
 function showDemo(index) {
 
+  if (demoScreens.length === 0) {
+    return;
+  }
+
+
   currentDemo = index;
 
 
@@ -389,9 +450,15 @@ function showDemo(index) {
 
 function nextDemo() {
 
+  if (demoScreens.length === 0) {
+    return;
+  }
+
+
   const next =
     (currentDemo + 1)
     % demoScreens.length;
+
 
   showDemo(next);
 }
@@ -399,6 +466,11 @@ function nextDemo() {
 
 
 function startDemoRotation() {
+
+  if (demoScreens.length <= 1) {
+    return;
+  }
+
 
   if (
     window.matchMedia(
@@ -485,6 +557,10 @@ if (phone) {
 
 
 
-showDemo(0);
+if (demoScreens.length > 0) {
 
-startDemoRotation();
+  showDemo(0);
+
+  startDemoRotation();
+
+}
