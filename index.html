@@ -185,8 +185,7 @@
     }
 
     .feature-point {
-      padding:
-        17px 0;
+      padding: 17px 0;
 
       border-top:
         1px solid var(--line);
@@ -239,86 +238,6 @@
 
     .screenshot-stage.compact {
       min-height: 610px;
-    }
-
-
-    /* TWO-SCREEN SHOWCASE */
-
-    .dual-showcase {
-      display: grid;
-
-      grid-template-columns:
-        minmax(0, 1fr)
-        minmax(0, 1fr);
-
-      align-items: center;
-
-      gap: 32px;
-
-      padding:
-        55px;
-
-      overflow: hidden;
-
-      background: #101318;
-
-      border-radius:
-        var(--radius-large);
-    }
-
-    .dual-showcase-copy {
-      color: #ffffff;
-    }
-
-    .dual-showcase-copy h2 {
-      margin-bottom: 24px;
-
-      font-size:
-        clamp(42px, 5vw, 66px);
-
-      line-height: 1;
-
-      letter-spacing: -0.055em;
-    }
-
-    .dual-showcase-copy p {
-      max-width: 520px;
-
-      color:
-        rgba(255, 255, 255, 0.66);
-
-      font-size: 18px;
-
-      line-height: 1.65;
-    }
-
-    .dual-showcase-devices {
-      position: relative;
-
-      min-height: 660px;
-    }
-
-    .dual-device {
-      position: absolute;
-
-      width:
-        min(64%, 310px);
-    }
-
-    .dual-device:first-child {
-      left: 2%;
-      top: 20px;
-
-      transform:
-        rotate(-4deg);
-    }
-
-    .dual-device:last-child {
-      right: 2%;
-      bottom: 10px;
-
-      transform:
-        rotate(4deg);
     }
 
 
@@ -390,19 +309,6 @@
           min(82vw, 410px);
       }
 
-      .dual-showcase {
-        grid-template-columns: 1fr;
-
-        padding:
-          48px 28px;
-
-        gap: 30px;
-      }
-
-      .dual-showcase-devices {
-        min-height: 650px;
-      }
-
     }
 
 
@@ -412,14 +318,12 @@
         font-size: 12px;
       }
 
-      .feature-split-copy h2,
-      .dual-showcase-copy h2 {
+      .feature-split-copy h2 {
         font-size:
           clamp(38px, 12vw, 52px);
       }
 
-      .feature-split-copy p,
-      .dual-showcase-copy p {
+      .feature-split-copy p {
         font-size: 16px;
       }
 
@@ -440,21 +344,6 @@
 
       .marketing-shot {
         border-radius: 41px;
-      }
-
-      .dual-showcase {
-        padding:
-          40px 20px;
-
-        border-radius: 26px;
-      }
-
-      .dual-showcase-devices {
-        min-height: 560px;
-      }
-
-      .dual-device {
-        width: 68%;
       }
 
     }
@@ -573,7 +462,7 @@
           </picture>
 
 
-          <!-- EN -->
+          <!-- ENGLISH -->
           <div data-lang-content="en">
 
             <div class="eyebrow">
@@ -594,7 +483,7 @@
           </div>
 
 
-          <!-- TR -->
+          <!-- TÜRKÇE -->
           <div
             data-lang-content="tr"
             hidden
@@ -669,10 +558,10 @@
               class="marketing-shot"
               data-lang-content="en"
               role="img"
-              aria-label="Yolsera Today screen in English"
+              aria-label="Yolsera trip overview screen in English"
               style="
                 --shot:
-                  url('assets/en/02-today.png');
+                  url('assets/en/01-trip-overview.png');
               "
             ></div>
 
@@ -680,10 +569,10 @@
               class="marketing-shot"
               data-lang-content="tr"
               role="img"
-              aria-label="Yolsera Bugün ekranı"
+              aria-label="Yolsera seyahat genel bakış ekranı"
               style="
                 --shot:
-                  url('assets/tr/02-today.png');
+                  url('assets/tr/01-trip-overview.png');
               "
               hidden
             ></div>
@@ -908,7 +797,7 @@
 
         <div class="feature-split-copy">
 
-          <!-- EN -->
+          <!-- ENGLISH -->
           <div data-lang-content="en">
 
             <span class="eyebrow">
@@ -965,7 +854,7 @@
           </div>
 
 
-          <!-- TR -->
+          <!-- TÜRKÇE -->
           <div
             data-lang-content="tr"
             hidden
@@ -1174,7 +1063,7 @@
 
         <div class="feature-split-copy">
 
-          <!-- EN -->
+          <!-- ENGLISH -->
           <div data-lang-content="en">
 
             <span class="eyebrow">
@@ -1220,7 +1109,7 @@
           </div>
 
 
-          <!-- TR -->
+          <!-- TÜRKÇE -->
           <div
             data-lang-content="tr"
             hidden
